@@ -139,11 +139,19 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+//why do I not set arr2= to something?! 
 
-    /*code here*/
 
+function copy(arr,newArray){
+
+    newArray =[...arr];
+    return newArray;
 }
+console.log (copy(originalFlavors,'core list'))
+
+
+
+//const myFavouriteCity = [...cities];
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -160,10 +168,10 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-/*function filterByWord(arr,str){
+function filterByWord(arr,str){
     let newArr=[];
-    for (let i=0, i < arr.length; i++){
-        if(arr[i].includes (string)){
+    for (let i=0; i < arr.length; i++){
+        if(arr[i].includes (str)){
             newArr.push(arr[i]);
         }
     }
@@ -171,7 +179,7 @@ hint - you can use the .includes method to help you solve this */
     return newArr;
 }
 
-console.log(filterByWord(OriginalFlavors,'Chocolate'))*/
+console.log(filterByWord(originalFlavors,'Chocolate'))
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
